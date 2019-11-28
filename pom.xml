@@ -8,8 +8,8 @@
     <artifactId>openapi</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
-    <name>developer-open</name>
-    <description>mile cloud class java sdk for developer</description>
+    <name>openapi</name>
+    <description>mile cloud class java sdk for developers</description>
 
 
     <properties>
