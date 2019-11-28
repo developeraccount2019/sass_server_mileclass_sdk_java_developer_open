@@ -10,29 +10,24 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.pojo;
+package com.meleclass.openapi.pojo;
 
+import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**
  * @author: zhenshui.xia
  * @date: 2019/11/25
- * @desc: 房间用户进出统计
+ * @desc: 用户进出信息
  */
 @Data
-public class InoutStat {
-    /** 用户id */
-    private Integer userId;
-    /** 用户角色，1-学生；2-老师；3-旁听 4：助教 */
-    private Integer userType;
-    /** 用户昵称 */
-    private String nickName;
-    /** 合作方用户ID*/
-    private String userNo;
+public class Inout extends MelotPojo {
     /** 最早时入时间	 */
     private Long enterTime;
-    /** 最后一次离开房间时间	 */
+    /** 最晚退出时间 */
     private Long leaveTime;
-    /** 实际听课时长，指上课状态下，学生在房间的停留时长，单位秒	 */
-    private Integer totalTime;
+    /** 用户类型 1-学生；2-老师；3-旁听 4：助教 */
+    private Integer userType;
+    /** 用户Id */
+    private Integer userId;
 }

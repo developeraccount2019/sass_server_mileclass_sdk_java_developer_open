@@ -10,20 +10,24 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.pojo;
+package com.meleclass.openapi.pojo;
 
-import com.melot.mile.developer.open.api.MelotPojo;
+import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**
  * @author: zhenshui.xia
  * @date: 2019/11/25
- * @desc: 回放信息
+ * @desc: 上课记录
  */
 @Data
-public class Playback extends MelotPojo {
-    /** 回放状态 0：回放未生成 1：回放已经生成 */
-    private Integer status;
-    /** 回放地址 */
-    private String url;
+public class Live extends MelotPojo {
+    /** 开始时间 */
+    private Long beginTime;
+
+    /** 结束时间 */
+    private Long endTime;
+
+    /** 老师id */
+    private Integer userId;
 }

@@ -1,4 +1,4 @@
-package com.melot.mile.developer.open; /**
+package com.meleclass.openapi; /**
  * ========================================================
  * Copyright(c) 2012-2019 Melot All Rights Reserve
  * ========================================================
@@ -11,8 +11,8 @@ package com.melot.mile.developer.open; /**
  * ========================================================
  */
 
-import com.melot.mile.developer.open.api.MelotApi;
-import com.melot.mile.developer.open.api.MelotConfiguration;
+import com.meleclass.openapi.api.MelotApi;
+import com.meleclass.openapi.api.MelotConfiguration;
 
 /**
  * @author: zhenshui.xia

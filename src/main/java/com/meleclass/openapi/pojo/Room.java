@@ -10,9 +10,9 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.pojo;
+package com.meleclass.openapi.pojo;
 
-import com.melot.mile.developer.open.api.MelotPojo;
+import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**

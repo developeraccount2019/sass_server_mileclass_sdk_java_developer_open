@@ -10,19 +10,27 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.api;
+package com.meleclass.openapi.api;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
+
 /**
  * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: pojo基类
+ * @date: 2019/6/26
+ * @desc: 接口响应对象
  */
 @Data
-public abstract class MelotPojo implements Serializable {
+public class MelotResult<T>  implements Serializable{
 
+    /** 失败信息描述 */
+    private String errorMsg ;
+
+    /** 响应码 */
+    private Integer code;
+
+    /** 接口成功返回数据 */
+    private T data;
 }
-

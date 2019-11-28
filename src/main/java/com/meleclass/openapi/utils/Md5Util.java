@@ -10,7 +10,7 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.utils;
+package com.meleclass.openapi.utils;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

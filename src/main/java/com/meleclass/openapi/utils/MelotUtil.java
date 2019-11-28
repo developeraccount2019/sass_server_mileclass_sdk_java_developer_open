@@ -10,10 +10,10 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.utils;
+package com.meleclass.openapi.utils;
 
-import com.melot.mile.developer.open.api.MelotErrorCode;
-import com.melot.mile.developer.open.api.MelotException;
+import com.meleclass.openapi.api.MelotErrorCode;
+import com.meleclass.openapi.api.MelotException;
 import org.apache.commons.lang3.StringUtils;
 
 /**

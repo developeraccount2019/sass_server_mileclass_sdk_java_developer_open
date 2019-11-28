@@ -10,13 +10,13 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.utils;
+package com.meleclass.openapi.utils;
 
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.http.HttpRequest;
 import com.alibaba.fastjson.JSONObject;
-import com.melot.mile.developer.open.api.MelotConfiguration;
-import com.melot.mile.developer.open.api.MelotResult;
+import com.meleclass.openapi.api.MelotConfiguration;
+import com.meleclass.openapi.api.MelotResult;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;

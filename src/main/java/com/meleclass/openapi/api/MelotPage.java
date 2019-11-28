@@ -10,27 +10,25 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.api;
+package com.meleclass.openapi.api;
 
-import lombok.*;
+import lombok.Data;
 
-import java.io.Serializable;
-
+import java.util.List;
 
 /**
  * @author: zhenshui.xia
- * @date: 2019/6/26
- * @desc: 接口响应对象
+ * @date: 2019/11/25
+ * @desc: 分页类
  */
 @Data
-public class MelotResult<T>  implements Serializable{
-
-    /** 失败信息描述 */
-    private String errorMsg ;
-
-    /** 响应码 */
-    private Integer code;
-
-    /** 接口成功返回数据 */
-    private T data;
+public class MelotPage<T>  {
+    /** 数据 */
+    private List<T> list;
+    /** 总共数据 */
+    private long total;
+    /** 每页最多数量 */
+    private long pageSize;
+    /** 当前页，从第一页开始 */
+    private long page;
 }

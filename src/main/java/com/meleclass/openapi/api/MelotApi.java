@@ -10,12 +10,12 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.api;
+package com.meleclass.openapi.api;
 
 import com.google.common.reflect.TypeToken;
-import com.melot.mile.developer.open.pojo.*;
-import com.melot.mile.developer.open.utils.HttpUtil;
-import com.melot.mile.developer.open.utils.MelotUtil;
+import com.meleclass.openapi.pojo.*;
+import com.meleclass.openapi.utils.HttpUtil;
+import com.meleclass.openapi.utils.MelotUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;

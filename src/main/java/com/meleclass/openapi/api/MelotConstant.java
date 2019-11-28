@@ -10,7 +10,7 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.api;
+package com.meleclass.openapi.api;
 
 /**
  * @author: zhenshui.xia

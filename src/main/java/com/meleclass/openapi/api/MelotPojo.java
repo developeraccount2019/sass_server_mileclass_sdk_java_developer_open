@@ -10,24 +10,19 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.pojo;
+package com.meleclass.openapi.api;
 
-import com.melot.mile.developer.open.api.MelotPojo;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @author: zhenshui.xia
  * @date: 2019/11/25
- * @desc: 用户进出信息
+ * @desc: pojo基类
  */
 @Data
-public class Inout extends MelotPojo {
-    /** 最早时入时间	 */
-    private Long enterTime;
-    /** 最晚退出时间 */
-    private Long leaveTime;
-    /** 用户类型 1-学生；2-老师；3-旁听 4：助教 */
-    private Integer userType;
-    /** 用户Id */
-    private Integer userId;
+public abstract class MelotPojo implements Serializable {
+
 }
+

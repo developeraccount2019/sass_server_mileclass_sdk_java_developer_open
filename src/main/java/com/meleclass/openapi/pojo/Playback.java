@@ -10,25 +10,20 @@
  * <p>
  * ========================================================
  */
-package com.melot.mile.developer.open.api;
+package com.meleclass.openapi.pojo;
 
+import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
-
-import java.util.List;
 
 /**
  * @author: zhenshui.xia
  * @date: 2019/11/25
- * @desc: 分页类
+ * @desc: 回放信息
  */
 @Data
-public class MelotPage<T>  {
-    /** 数据 */
-    private List<T> list;
-    /** 总共数据 */
-    private long total;
-    /** 每页最多数量 */
-    private long pageSize;
-    /** 当前页，从第一页开始 */
-    private long page;
+public class Playback extends MelotPojo {
+    /** 回放状态 0：回放未生成 1：回放已经生成 */
+    private Integer status;
+    /** 回放地址 */
+    private String url;
 }
