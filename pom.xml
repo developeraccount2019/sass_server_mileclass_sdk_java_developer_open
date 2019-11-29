@@ -6,11 +6,10 @@
 
     <groupId>com.meleclass</groupId>
     <artifactId>openapi</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>openapi</name>
     <description>mile cloud class java sdk for developers</description>
-
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
