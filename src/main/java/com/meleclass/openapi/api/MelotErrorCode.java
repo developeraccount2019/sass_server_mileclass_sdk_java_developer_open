@@ -13,9 +13,9 @@
 package com.meleclass.openapi.api;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/4
- * @desc: 错误码描述
+ * author: zhenshui.xia
+ * date: 2019/11/4
+ * desc: 错误码描述
  */
 public enum  MelotErrorCode {
 

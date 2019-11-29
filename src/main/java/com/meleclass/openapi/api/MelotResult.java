@@ -18,9 +18,9 @@ import java.io.Serializable;
 
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/6/26
- * @desc: 接口响应对象
+ * author: zhenshui.xia
+ * date: 2019/6/26
+ * desc: 接口响应对象
  */
 @Data
 public class MelotResult<T>  implements Serializable{

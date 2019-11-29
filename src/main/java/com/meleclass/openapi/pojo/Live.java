@@ -16,9 +16,9 @@ import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 上课记录
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 上课记录
  */
 @Data
 public class Live extends MelotPojo {

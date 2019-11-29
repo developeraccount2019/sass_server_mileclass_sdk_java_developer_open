@@ -15,9 +15,9 @@ package com.meleclass.openapi.api;
 import lombok.Data;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 配置类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 配置类
  */
 @Data
 public class MelotConfiguration {
@@ -40,8 +40,8 @@ public class MelotConfiguration {
 
         /**
          * 设置应用id
-         * @param appId
-         * @return
+         * @param appId  应用id
+         * @return  配置builder对象
          */
         public Builder setAppId(String appId){
             this.appId = appId;
@@ -50,8 +50,8 @@ public class MelotConfiguration {
 
         /**
          * 设置应用密钥
-         * @param appSecret
-         * @return
+         * @param appSecret 应用密钥
+         * @return  配置builder对象
          */
         public Builder setAppSecret(String appSecret) {
             this.appSecret = appSecret;
@@ -60,8 +60,8 @@ public class MelotConfiguration {
 
         /**
          *  设置http读取超时时间，单位毫秒
-         * @param milliseconds
-         * @return
+         * @param milliseconds 读取超时时间
+         * @return 配置builder对象
          */
         public Builder setReadTimeout(Integer milliseconds) {
             this.readTimeout = milliseconds;
@@ -70,8 +70,8 @@ public class MelotConfiguration {
 
         /**
          * 设置http连接超时时间，单位毫秒
-         * @param milliseconds
-         * @return
+         * @param milliseconds 连接超时时间
+         * @return 配置builder对象
          */
         public Builder setConnectionTimeout(Integer milliseconds) {
             this.connectionTimeout = milliseconds;
@@ -80,7 +80,7 @@ public class MelotConfiguration {
 
         /**
          * 生成配置对象
-         * @return
+         * @return 配置对象
          */
         public MelotConfiguration build(){
             if(readTimeout == null || readTimeout<=0) {

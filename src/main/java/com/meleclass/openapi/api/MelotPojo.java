@@ -17,9 +17,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: pojo基类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: pojo基类
  */
 @Data
 public abstract class MelotPojo implements Serializable {

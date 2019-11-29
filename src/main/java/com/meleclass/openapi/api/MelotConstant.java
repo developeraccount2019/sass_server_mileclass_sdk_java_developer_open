@@ -13,9 +13,9 @@
 package com.meleclass.openapi.api;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 常量类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 常量类
  */
 public class MelotConstant {
     /** 接口地址 */

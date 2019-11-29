@@ -14,9 +14,9 @@ package com.meleclass.openapi.api;
 
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/6/26
- * @desc: 业务逻辑异常
+ * author: zhenshui.xia
+ * date: 2019/6/26
+ * desc: 业务逻辑异常
  */
 public class MelotException extends RuntimeException {
     private static final long serialVersionUID = 1L;

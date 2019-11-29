@@ -23,9 +23,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 接口调用实现
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 接口调用实现
  */
 public class MelotApi {
     /** 配置对象 */
@@ -54,7 +54,7 @@ public class MelotApi {
      * @param endTime  结束时间戳（必填）
      * @param teacherRemark  老师备注
      * @param roomRemark  房间备注
-     * @return
+     * @return  创建房间的信息
      */
     public MelotResult<Room> roomCreate(String subject, Long startTime, Long endTime, String teacherRemark, String roomRemark) {
         MelotUtil.checkEmptyParameter(subject, "subject");
@@ -82,7 +82,7 @@ public class MelotApi {
      * @param teacherRemark  老师备注
      * @param roomRemark  房间备注
      * @param status  房间状态：0-关闭；1-开启（默认状态
-     * @return
+     * @return  房间修改后信息
      */
     public MelotResult<Room> roomModify(String roomId, String subject, Long startTime, Long endTime, String teacherRemark, String roomRemark, Integer status) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
@@ -104,7 +104,7 @@ public class MelotApi {
     /**
      * 获取房间信息
      * @param roomId 房间id（必填）
-     * @return
+     * @return 当前roomId的房间信息
      */
     public MelotResult<Room> roomInfo(String roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
@@ -121,7 +121,7 @@ public class MelotApi {
     /**
      * 查询房间回放信息
      * @param roomId 房间id（必填）
-     * @return
+     * @return  回放信息
      */
     public MelotResult<Playback> roomPlayback(String roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
@@ -140,7 +140,7 @@ public class MelotApi {
      * @param roomId 房间id（必填）
      * @param page 当前页，从第1页开始， 默认1
      * @param pageSize 每页最多数量， 默认20
-     * @return
+     * @return  用户听课统计记录，分页
      */
     public MelotResult<MelotPage<InoutStat>> roomInoutStatList(String roomId, Integer page, Integer pageSize) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
@@ -161,7 +161,7 @@ public class MelotApi {
      * @param userId 用户id
      * @param page 当前页，从第1页开始， 默认1
      * @param pageSize 每页最多数量， 默认20
-     * @return
+     * @return  用户进出记录
      */
     public MelotResult<MelotPage<Inout>> roomInoutList(String roomId, Integer userId, Integer page, Integer pageSize) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
@@ -181,7 +181,7 @@ public class MelotApi {
     /**
      * 查询房间上课记录
      * @param roomId 房间id（必填）
-     * @return
+     * @return 上课记录，分页
      */
     public MelotResult<List<Live>> roomLiveList(String roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");

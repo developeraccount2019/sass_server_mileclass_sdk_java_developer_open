@@ -15,9 +15,9 @@ package com.meleclass.openapi.pojo;
 import lombok.Data;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 房间用户进出统计
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 房间用户进出统计
  */
 @Data
 public class InoutStat {

@@ -16,9 +16,9 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 
 /**
- * @author : Zhenshui.Xia
- * @date   : 2019-9-19
- * @desc   : MD5工具类
+ * author : Zhenshui.Xia
+ * date   : 2019-9-19
+ * desc   : MD5工具类
  */
 public class Md5Util {
     private static final char HEX_DIGITS[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};

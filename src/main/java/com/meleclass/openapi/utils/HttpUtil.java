@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: http请求工具类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: http请求工具类
  */
 public class HttpUtil {
     /**
@@ -34,7 +34,7 @@ public class HttpUtil {
      * @param paramMap 请求参数
      * @param type  返回对象类型
      * @param configuration  配置参数
-     * @return
+     * @return  http get请求响应对象，对象类型参见MelotResult类
      */
     public static MelotResult get(String url, Map<String, Object> paramMap, Type type, MelotConfiguration configuration){
         String result = HttpRequest.get(url)
@@ -54,7 +54,7 @@ public class HttpUtil {
      * @param paramMap 请求参数
      * @param type  返回对象类型
      * @param configuration  配置参数
-     * @return
+     * @return  http post请求响应对象，对象类型参见MelotResult类
      */
     public static MelotResult post(String url, Map<String, Object> paramMap, Type type, MelotConfiguration configuration){
         String result = HttpRequest.post(url)
@@ -71,7 +71,7 @@ public class HttpUtil {
     /**
      *  获取http请求头参数
      * @param configuration
-     * @return
+     * @return 请求头map数据
      */
     private static Map<String, String> getHeader(MelotConfiguration configuration) {
         String nonce = IdUtil.randomUUID();

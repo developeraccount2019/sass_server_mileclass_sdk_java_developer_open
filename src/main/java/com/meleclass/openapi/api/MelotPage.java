@@ -17,9 +17,9 @@ import lombok.Data;
 import java.util.List;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 分页类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 分页类
  */
 @Data
 public class MelotPage<T>  {

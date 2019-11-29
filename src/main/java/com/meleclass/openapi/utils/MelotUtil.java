@@ -17,17 +17,17 @@ import com.meleclass.openapi.api.MelotException;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * @author: zhenshui.xia
- * @date: 2019/11/25
- * @desc: 常用工具类
+ * author: zhenshui.xia
+ * date: 2019/11/25
+ * desc: 常用工具类
  */
 public class MelotUtil {
     /**
      * 检查参数是否为空
-     * @param t
-     * @param name
-     * @param <T>
-     * @throws MelotException
+     * @param t 参数值
+     * @param name 参数名
+     * @param <T>  参数类型
+     * @throws MelotException  系统定义异常
      */
     public static <T>void checkEmptyParameter(T t, String name) throws MelotException {
         if(t == null || StringUtils.isBlank(t.toString())) {
