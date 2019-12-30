@@ -12,18 +12,23 @@
  */
 package com.meleclass.openapi.pojo;
 
-import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**
- * author: zhenshui.xia
- * date: 2019/11/25
- * desc: 回放信息
+ * @author: zhenshui.xia
+ * @date: 2019/12/30
+ * @desc: 老师点名信息
  */
 @Data
-public class Playback extends MelotPojo {
-    /** 回放状态 0：回放未生成 1：回放已经生成 */
-    private Integer status;
-    /** 回放地址 */
-    private String playbackUrl;
+public class Rollcall {
+    /** 点名记录ID */
+    private Integer rollcallId;
+    /** 开始时间 */
+    private Long startTime;
+    /** 结束时间 */
+    private Long endTime;
+    /** 在线人数，发起点名时，房间内在线用户人数 */
+    private Integer onlineCount;
+    /** 点到人数，发起点名后，房间内点到用户人数 */
+    private Integer rollcallCount;
 }

@@ -6,7 +6,7 @@
 
     <groupId>com.meleclass</groupId>
     <artifactId>openapi</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3</version>
     <packaging>jar</packaging>
     <name>openapi</name>
     <description>mile cloud class java sdk for developers</description>
@@ -90,7 +90,7 @@
                     <serverId>developeraccount</serverId>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <!-- 如果希望发布后自动执行close和release操作，此处可以调整为true -->
-                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
 

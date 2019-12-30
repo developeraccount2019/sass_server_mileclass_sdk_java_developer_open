@@ -84,7 +84,7 @@ public class MelotApi {
      * @param status  房间状态：0-关闭；1-开启（默认状态
      * @return  房间修改后信息
      */
-    public MelotResult<Room> roomModify(String roomId, String subject, Long startTime, Long endTime, String teacherRemark, String roomRemark, Integer status) {
+    public MelotResult<Room> roomModify(Integer roomId, String subject, Long startTime, Long endTime, String teacherRemark, String roomRemark, Integer status) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -106,7 +106,7 @@ public class MelotApi {
      * @param roomId 房间id（必填）
      * @return 当前roomId的房间信息
      */
-    public MelotResult<Room> roomInfo(String roomId) {
+    public MelotResult<Room> roomInfo(Integer roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -123,7 +123,7 @@ public class MelotApi {
      * @param roomId 房间id（必填）
      * @return  回放信息
      */
-    public MelotResult<Playback> roomPlayback(String roomId) {
+    public MelotResult<Playback> roomPlayback(Integer roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -142,7 +142,7 @@ public class MelotApi {
      * @param pageSize 每页最多数量， 默认20
      * @return  用户听课统计记录，分页
      */
-    public MelotResult<MelotPage<InoutStat>> roomInoutStatList(String roomId, Integer page, Integer pageSize) {
+    public MelotResult<MelotPage<InoutStat>> roomInoutStatList(Integer roomId, Integer page, Integer pageSize) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -163,7 +163,7 @@ public class MelotApi {
      * @param pageSize 每页最多数量， 默认20
      * @return  用户进出记录
      */
-    public MelotResult<MelotPage<Inout>> roomInoutList(String roomId, Integer userId, Integer page, Integer pageSize) {
+    public MelotResult<MelotPage<Inout>> roomInoutList(Integer roomId, Integer userId, Integer page, Integer pageSize) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -183,7 +183,7 @@ public class MelotApi {
      * @param roomId 房间id（必填）
      * @return 上课记录，分页
      */
-    public MelotResult<List<Live>> roomLiveList(String roomId) {
+    public MelotResult<List<Live>> roomLiveList(Integer roomId) {
         MelotUtil.checkEmptyParameter(roomId, "roomId");
 
         Map<String, Object> paramMap = new HashMap<String, Object>();
@@ -191,6 +191,120 @@ public class MelotApi {
 
         MelotResult<List<Live>> melotResult = HttpUtil.get(MelotConstant.ROOM_LIVE_LIST_URL,
                 paramMap, new TypeToken<MelotResult<List<Live>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+
+    /**
+     * 根据房间ID查询房间内答题记录
+     * @param roomId 房间id（必填）
+     * @return 房间内答题记录
+     */
+    public MelotResult<List<Exam>> examList(Integer roomId) {
+        MelotUtil.checkEmptyParameter(roomId, "roomId");
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("roomId", roomId);
+
+        MelotResult<List<Exam>> melotResult = HttpUtil.get(MelotConstant.ROOM_EXAM_LIST_URL,
+                paramMap, new TypeToken<MelotResult<List<Exam>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 根据答题记录ID查询用户答题数据
+     * @param examId 房间id（必填）
+     * @return 用户答题数据
+     */
+    public MelotResult<List<ExamDetail>> examDetail(Integer examId) {
+        MelotUtil.checkEmptyParameter(examId, "examId");
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("examId", examId);
+
+        MelotResult<List<ExamDetail>> melotResult = HttpUtil.get(MelotConstant.ROOM_EXAM_DETAIL_URL,
+                paramMap, new TypeToken<MelotResult<List<ExamDetail>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 根据房间ID查询房间内点名记录
+     * @param roomId 房间id（必填）
+     * @return 房间内点名记录
+     */
+    public MelotResult<List<Rollcall>> rollcallList(Integer roomId) {
+        MelotUtil.checkEmptyParameter(roomId, "roomId");
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("roomId", roomId);
+
+        MelotResult<List<Rollcall>> melotResult = HttpUtil.get(MelotConstant.ROOM_ROLLCALL_LIST_URL,
+                paramMap, new TypeToken<MelotResult<List<Rollcall>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 根据点名记录ID查询用户点名数据
+     * @param rollcallId 房间id（必填）
+     * @return 用户点名数据
+     */
+    public MelotResult<List<RollcallDetail>> rollcallDetail(Integer rollcallId) {
+        MelotUtil.checkEmptyParameter(rollcallId, "rollcallId");
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("rollcallId", rollcallId);
+
+        MelotResult<List<RollcallDetail>> melotResult = HttpUtil.get(MelotConstant.ROOM_ROLLCALL_DETAIL_URL,
+                paramMap, new TypeToken<MelotResult<List<RollcallDetail>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 根据房间ID查询用户连麦数据
+     * @param roomId 房间id（必填）
+     * @return 用户连麦数据，分页
+     */
+    public MelotResult<MelotPage<JoinLive>> joinliveList(Integer roomId) {
+        MelotUtil.checkEmptyParameter(roomId, "roomId");
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("roomId", roomId);
+
+        MelotResult<MelotPage<JoinLive>> melotResult = HttpUtil.get(MelotConstant.ROOM_JOINLIVE_LIST_URL,
+                paramMap, new TypeToken<MelotResult<MelotPage<JoinLive>>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 设置回调地址
+     * @param url 回调地址（必填）
+     * @param requestMethod 回调请求方式，1：GET, 2:POST（非必填）
+     * @return 无
+     */
+    public MelotResult<Void> callbackSetUrl(String url, Integer requestMethod) {
+        MelotUtil.checkEmptyParameter(url, "url");
+
+        if (requestMethod != null && (requestMethod != 1 || requestMethod != 2)) {
+            throw new MelotException(MelotErrorCode.ERROR_PARAM_VALUE, "参数requestMethod错误:["+ requestMethod +"]");
+        }
+
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("url", url);
+        paramMap.put("requestMethod", requestMethod);
+
+
+        MelotResult<Void> melotResult = HttpUtil.get(MelotConstant.CALLBACK_SET_URL,
+                paramMap, new TypeToken<MelotResult<Void>>(){}.getType(), configuration);
+        return melotResult;
+    }
+
+    /**
+     * 删除回调地址
+     * @return 无
+     */
+    public MelotResult<Void> callbackDelUrl() {
+        MelotResult<Void> melotResult = HttpUtil.get(MelotConstant.CALLBACK_DEL_URL,
+                null, new TypeToken<MelotResult<Void>>(){}.getType(), configuration);
         return melotResult;
     }
 

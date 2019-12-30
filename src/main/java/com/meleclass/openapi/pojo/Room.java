@@ -29,7 +29,7 @@ public class Room extends MelotPojo {
     /** 课堂结束时间 */
     private Long endTime;
     /** 课堂Id */
-    private String roomId;
+    private Integer roomId;
     /** 课堂备注 */
     private String roomRemark;
     /** 课堂开始时间 */

@@ -12,18 +12,13 @@
  */
 package com.meleclass.openapi.pojo;
 
-import com.meleclass.openapi.api.MelotPojo;
 import lombok.Data;
 
 /**
- * author: zhenshui.xia
- * date: 2019/11/25
- * desc: 回放信息
+ * @author: zhenshui.xia
+ * @date: 2019/12/30
+ * @desc: 连麦信息
  */
 @Data
-public class Playback extends MelotPojo {
-    /** 回放状态 0：回放未生成 1：回放已经生成 */
-    private Integer status;
-    /** 回放地址 */
-    private String playbackUrl;
+public class JoinLive {
 }

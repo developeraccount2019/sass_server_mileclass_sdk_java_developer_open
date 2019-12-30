@@ -19,26 +19,48 @@ package com.meleclass.openapi.api;
  */
 public class MelotConstant {
     /** 接口地址 */
-    private static final String API_HOST = "http://10.4.13.240:9528";
+    private static final String API_HOST = "http://openapi.meleclass.com";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_CREATE_URL = API_HOST + "/api/server/room/create";
+    public static final String ROOM_CREATE_URL = API_HOST + "/api/room/create";
 
     /** 修改房间接口地址 */
-    public static final String ROOM_MODIFY_URL = API_HOST + "/api/server/room/modify";
+    public static final String ROOM_MODIFY_URL = API_HOST + "/api/room/modify";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_INFO_URL = API_HOST + "/api/server/room/info";
+    public static final String ROOM_INFO_URL = API_HOST + "/api/room/info";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_PLAYBACK_URL = API_HOST + "/api/server/room/playback";
+    public static final String ROOM_PLAYBACK_URL = API_HOST + "/api/room/playback";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_INOUT_STAT_LIST_URL = API_HOST + "/api/server/room/inout/stat/list";
+    public static final String ROOM_INOUT_STAT_LIST_URL = API_HOST + "/api/room/inout/stat/list";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_LIVE_LIST_URL = API_HOST + "/api/server/room/live/list";
+    public static final String ROOM_LIVE_LIST_URL = API_HOST + "/api/room/live/list";
 
     /** 创建房间接口地址 */
-    public static final String ROOM_INOUT_LIST_URL = API_HOST + "/api/server/room/inout/list";
+    public static final String ROOM_INOUT_LIST_URL = API_HOST + "/api/room/inout/list";
+
+
+    /** 根据房间ID查询房间内答题记录 */
+    public static final String ROOM_EXAM_LIST_URL = API_HOST + "/api/room/exam/list";
+
+    /** 根据答题记录ID查询用户答题数据 */
+    public static final String ROOM_EXAM_DETAIL_URL = API_HOST + "/api/room/exam/detail";
+
+    /** 根据房间ID查询房间内点名记录 */
+    public static final String ROOM_ROLLCALL_LIST_URL = API_HOST + "/api/room/rollcall/list";
+
+    /** 根据点名记录ID查询用户点名数据 */
+    public static final String ROOM_ROLLCALL_DETAIL_URL = API_HOST + "/api/room/rollcall/detail";
+
+    /** 根据房间ID查询用户连麦数据 */
+    public static final String ROOM_JOINLIVE_LIST_URL = API_HOST + "/api/room/joinlive/list";
+
+    /** 设置回调地址 */
+    public static final String CALLBACK_SET_URL = API_HOST + "/api/callback/setUrl";
+
+    /** 删除回调地址 */
+    public static final String CALLBACK_DEL_URL = API_HOST + "/api/callback/delUrl";
 }

@@ -29,7 +29,10 @@ public enum  MelotErrorCode {
     ERROR_CONFIGURATION_APP_SECRET_EMPTY("配置信息缺少appSecret"),
 
     /** 参数不能为空*/
-    ERROR_PARAM_EMPTY("参数不能为空");
+    ERROR_PARAM_EMPTY("参数不能为空"),
+
+    /** 参数取值错误*/
+    ERROR_PARAM_VALUE("参数不能为空");
 
 
     /** 失败信息描述 */
